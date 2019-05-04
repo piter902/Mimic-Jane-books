@@ -4,6 +4,9 @@ import {
   HomeLeft,
   HomeRight
 } from './style'
+import {actioncreate} from './store'
+import {connect} from 'react-redux'
+import axios from 'axios'
 import List from './component/list'
 import Writer from './component/writer'
 import Recomand from './component/recomand'
@@ -24,5 +27,19 @@ class Home extends Component{
       </HomeWraper>
     )
   }
+  componentDidMount(){
+    axios.get('/server/home.json').then(res=>{
+      const {data} =res.data
+      this.props.changehome(data)
+      console.log({data})
+    })
+  }
 }
-export default Home
+const mapDispatchToProps = (dispatch)=>{
+  return {
+    changehome:(value)=>{
+      dispatch(actioncreate.changehome(value))
+    }
+  }
+}
+export default connect(null,mapDispatchToProps)(Home)
