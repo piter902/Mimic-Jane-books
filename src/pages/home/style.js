@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 export const HomeWraper = styled.div`
   width:960px;
   overflow:hidden;
@@ -16,7 +15,7 @@ export const HomeLeft = styled.div`
   }
 `
 export const HomeRight = styled.div`
-  width:240px;
+  width:280px;
   float:right;
 `
 export const TopickWraper =styled.div`
@@ -70,5 +69,23 @@ export const ListItem = styled.div`
     display:block;
     float:right;
   }
+`
+export const RecomandWraper = styled.div`
+  margin:30px 0;
+  width:280px;
+`
+export const RecomandItem = styled.div`
+  height:50px;
+  background:url(${props=>props.imgurl});
+  background-size:contain;
+  width:280px;
+  margin-bottom:6px;
+`
+export const WriterWraper = styled.div`
+  width:278px;
+  border:1px solid #dcdcdc;
+  height:300px;
+  line-height:300px;
+  text-align:center;
 `
 

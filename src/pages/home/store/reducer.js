@@ -1,5 +1,10 @@
 // import * as types from './actionTypes'
 import { fromJS } from 'immutable'
+import b1 from '../../../assets/images/b1.png'
+import b2 from '../../../assets/images/b2.png'
+import b3 from '../../../assets/images/b3.png'
+import b4 from '../../../assets/images/b4.png'
+import a1 from '../../../assets/images/a1.jpg'
 const defaultState = fromJS({
 	toppiclist: [
 		{
@@ -17,12 +22,28 @@ const defaultState = fromJS({
 			"id": 1,
 			"title": "胡歌12年后首谈车祸",
 			"desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
-			"imgUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+			"imgUrl": a1
 		}, {
 			"id": 2,
 			"title": "胡歌12年后首谈车祸：既然活下来了，就不能白白活着",
 			"desc": "文/麦大人 01 胡歌又刷屏了。 近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的嗓音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：...",
-			"imgUrl": "//upload-images.jianshu.io/upload_images/2259045-2986b9be86b01f63?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+			"imgUrl": a1
+		}
+	],
+	recomandlist:[
+		{
+			"id": 1,
+			"imgUrl": b1
+		}, {
+			"id": 2,
+			"imgUrl": b2
+		},
+		{
+			"id": 3,
+			"imgUrl": b3
+		}, {
+			"id": 4,
+			"imgUrl": b4
 		}
 	]
 })

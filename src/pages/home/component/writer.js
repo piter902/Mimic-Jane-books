@@ -1,9 +1,11 @@
 import React ,{Component} from 'react';
-
+import {WriterWraper} from '../style'
 class Writer extends Component{
   render (){
     return (
-      <div>Writer===</div>
+      <WriterWraper>
+        homeork
+      </WriterWraper>
     )
   }
 }
