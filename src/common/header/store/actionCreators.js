@@ -25,7 +25,7 @@ export const changepage = (page)=>({
 
 export const getList = ()=>{
   return (dispatch) => {
-    axios.get('/api/headerList.json').then(res=>{
+    axios.get('/server/headerlist.json').then(res=>{
       dispatch(changelist(res.data.data))
     }).catch(err=>{
       console.log({err})

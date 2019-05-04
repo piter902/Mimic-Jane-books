@@ -1,15 +1,28 @@
 import React ,{Component} from 'react';
+import {connect} from 'react-redux'
 import {TopickWraper,TopickItem} from '../style'
 class Topick extends Component{
   render (){
+    const {list} =this.props
     return (
       <TopickWraper>
-        <TopickItem>
-          <img src="//static.ppdaicdn.com/dist/img/logo.224b397.png" className="top-pic"/>
-          社会热点
-        </TopickItem>
+        {
+          list.map(item=>{
+            return (
+              <TopickItem key={item.id}>
+                <img src={item.get('imgUrl')} className="top-pic"/>
+                {item.get('title')}
+              </TopickItem>
+            )
+          })
+        }
       </TopickWraper>
     )
   }
 }
-export default Topick
+const mapStateToProps=(state)=>{
+  return {
+    list:state.get('home').get('toppiclist')
+  }
+}
+export default connect(mapStateToProps,null)(Topick)
