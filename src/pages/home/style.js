@@ -23,7 +23,7 @@ export const TopickWraper =styled.div`
   padding:20px 0px 10px 0;
   overflow:hidden;
   margin-left:-10px;
-  /* background:red; */
+  border-bottom:1px solid #dcdcdc;
 `
 export const TopickItem =styled.div`
   float:left;
@@ -43,6 +43,32 @@ export const TopickItem =styled.div`
     float:left;
     width:32px;
     height:32px;
+  }
+`
+export const ListInfo = styled.div`
+  width:500px;
+  float:left;
+  .title{
+    line-height:27px;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+  }
+  .desc{
+    font-size: size 13px;
+    line-height:18px;
+    color:#999;
+  }
+`
+export const ListItem = styled.div`
+  overflow:hidden;
+  padding:20px 0;
+  border-bottom:1px solid #dcdcdc;
+  .list-pick{
+    width:125px;
+    height:100px;
+    display:block;
+    float:right;
   }
 `
 

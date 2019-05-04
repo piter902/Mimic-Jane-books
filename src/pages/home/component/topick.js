@@ -10,7 +10,7 @@ class Topick extends Component{
           list.map(item=>{
             return (
               <TopickItem key={item.id}>
-                <img src={item.get('imgUrl')} className="top-pic"/>
+                <img src={item.get('imgUrl')} className="top-pic" alt=""/>
                 {item.get('title')}
               </TopickItem>
             )
