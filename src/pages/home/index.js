@@ -28,17 +28,13 @@ class Home extends Component{
     )
   }
   componentDidMount(){
-    axios.get('/server/home.json').then(res=>{
-      const {data} =res.data
-      this.props.changehome(data)
-      console.log({data})
-    })
+    this.props.changehome()
   }
 }
 const mapDispatchToProps = (dispatch)=>{
   return {
-    changehome:(value)=>{
-      dispatch(actioncreate.changehome(value))
+    changehome:()=>{
+        dispatch(actioncreate.changehome())
     }
   }
 }
