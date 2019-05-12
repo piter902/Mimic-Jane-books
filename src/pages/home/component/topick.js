@@ -1,7 +1,7 @@
-import React ,{Component} from 'react';
+import React ,{PureComponent} from 'react';
 import {connect} from 'react-redux'
 import {TopickWraper,TopickItem} from '../style'
-class Topick extends Component{
+class Topick extends PureComponent{
   render (){
     const {list} =this.props
     return (

@@ -19,6 +19,7 @@ import {
   SearchInfoItem
 } from './style'
 import { actionCreators } from './store'
+import { Link } from 'react-router-dom';
 class Header extends Component {
   getList() {
     const { focused, list, page, mouseIn, totalpage, handleMouseEnter, handleMouseLeave, handleChangePage } = this.props
@@ -51,7 +52,9 @@ class Header extends Component {
     const { focused, handleFocus, handleBlur, list } = this.props
     return (
       <HeaderWraper>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>        
         <Nav>
           <NavItem className="left active">首页</NavItem>
           <NavItem className="left">下载App</NavItem>
