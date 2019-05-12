@@ -34,3 +34,9 @@ export const getMoreList =(page)=>{
     })
   }
 }
+export const changeBackTop = (show)=>{
+  return {
+    type:types.CHNAGE_BACK_SHOW,
+    show
+  }
+}
