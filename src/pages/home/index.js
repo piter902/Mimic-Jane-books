@@ -6,7 +6,6 @@ import {
 } from './style'
 import {actioncreate} from './store'
 import {connect} from 'react-redux'
-import axios from 'axios'
 import List from './component/list'
 import Writer from './component/writer'
 import Recomand from './component/recomand'

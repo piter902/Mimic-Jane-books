@@ -1,8 +1,10 @@
 import React ,{Component} from 'react';
 import {
   ListItem,
-  ListInfo
+  ListInfo,
+  LoadMore
 } from '../style'
+import {actioncreate} from '../store'
 import {connect} from 'react-redux'
 class List extends Component{
   render (){
@@ -10,9 +12,9 @@ class List extends Component{
     return (
       <div>
         {
-          infolist.map(item=>{
+          infolist.map((item,index)=>{
             return (
-              <ListItem key={item.get('id')}>
+              <ListItem key={index}>
                 <img className="list-pick" src={item.get('imgUrl')} alt=""/>
                 <ListInfo>
                   <h3 className="title">{item.get('title')}</h3>
@@ -22,13 +24,20 @@ class List extends Component{
             )
           })
         }
+        <LoadMore onClick={()=>this.props.getMoreList(this.props.page )}>加载更多</LoadMore>
       </div>
     )
   }
 }
 const mapStateToProps = (state)=>{
   return {
-    infolist:state.get('home').get('infoList')
+    infolist:state.get('home').get('infoList'),
+    page:state.get('home').get('page')
   }
 }
-export default connect(mapStateToProps,null)(List)
+const mapDispatchToProps = (dispatch)=>({
+  getMoreList(page){
+    dispatch(actioncreate.getMoreList(page))
+  }
+})
+export default connect(mapStateToProps,mapDispatchToProps)(List)
